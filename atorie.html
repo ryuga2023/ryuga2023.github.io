@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>京都  崇匠  桐箱職人-オーダーメイドの高級桐箱＆修復</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="京都の伝統桐箱職人がひとつひとつ高級な逸品をお作りいたします。オーダーメイドから箱の修復まで幅広くお受けいたします。">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="京都,南丹市,山科,オーダーメイド,伝統工芸,桐箱,木箱,木工芸,京もの">
+
+    <!--CSS-->
+    <link ref="stylesheet" herf="https://unpkg.com/ress/dist/ress.min.css">
+    <link herf ="https://font.googleapis.com/css?family=Philosopher" ref="stylesheet"> <!--Googleフォント-->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="icon"type="image/png"href="images/favicon.PNG">
+
+</head>
+<body>
+    <div id="atorie"class="big-bg">
+        <header class="page-header wrapper">
+            <h1><a href="index.html"><img class="logo" src="images/logo.PNG" alt="崇症LOGO"></a></h1>
+
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="blog.html">桐箱について</a></li>
+                    <li><a href="photo.html">製品紹介</a></li>
+                    <li><a href="atorie.html">アトリエ</a></li>
+                    <li><a href="blog.html">お知らせ</a></li>
+                    <li><a href="store.html">オンラインストア</a></li>
+                    <li><a href="meido.html">オーダーメイド</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="atorie.html"><img src="images/kirimonn.jpg" alt="桐紋章"></a></li>
+                </ul>
+            </nav>
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+            </select>
+        </header>
+
+        <div class ="atorie-content wrapper">
+            <h2 class="page-midasi">＜アトリエ＞</h2>
+            <div class="text">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>住所</td>
+                        <td>京都府南丹市八木町北廣瀬堂ノ本34</td>
+                    </tr>
+                    <tr>
+                        <td>TEL</td>
+                        <td>090-1712-7664</td>
+                    </tr>
+                    <tr>
+                        <td>FAX</td>
+                        <td>0771-43-1922</td>
+                    </tr>
+                    <tr>
+                        <td>mail</td>
+                        <td>yufiee2014@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>営業時間</td>
+                        <td>平日9:00~18:00</td>
+                    </tr>
+                    <tr>
+                        <td>定休日</td>
+                        <td>不定休</td>
+                    </tr>
+                    <tr>
+                        <td>アクセス</td>
+                        <td>最寄り　京都　嵯峨野線　八木駅　</td>
+                    </tr>
+                    <tr>
+                        <td>取扱い</td>
+                        <td>桐箱の制作、修復、手直し、オーダーメイド</td>
+                    </tr>
+                    <tr>
+                        <td>店舗説明</td>
+                        <td>販売店舗は持っておらず、工房のみになります。</td>
+                    </tr>
+                    <tr>
+                        <td>ご注文『オーダーメイド』</td>
+                        <td>リンク</td>
+                    </tr>
+                    <tr>
+                        <td>オンラインショップ</td>
+                        <td>リンク</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><!--/.home-content-->
+
+    </div><!--/#atorie-->
+
+
+        <!--時間が経てば写真が切り替わる-->
+        <div class="slideshow">
+            <a class="grid-gallery" href="images/img1-1600.jpg">
+                <img id="slide1"class="grid-item" src="images/image1.jpg">
+                <img id="slide2" class="grid-item"  src="images/image2.jpg">
+                <img id="slide3" class="grid-item" src="images/image3.jpg">
+            </a>
+
+            <script>
+                var slideIndex = 0;
+                var slides = document.querySelectorAll(".slideshow img");
+
+                function showSlides() {
+                for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].classList.add("active");
+                setTimeout(showSlides, 5000); // 切り替え時間
+                }
+
+                showSlides();
+            </script>
+        </div>
+
+
+        <!--住所-->
+        <div class="torihiki-content wrapper">
+            <div class="win-map">
+                <h2 class="page-midasi">＜取引先＞</h2>
+                <div class="customer">
+                    <h2>お得意先名</h2>
+                    <p>住所:〒000-0000 東京都渋谷区1-2-3</p>
+                    <p>電話番号:03-0000-0000</p>
+                    <p>担当者：山田太郎</p>
+                    <a href="customer-detail.html">詳細を見る</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <ul class="footer-nav">
+            <li><a href="htttps://twitter.com/">Twitter</a></li>
+            <li><a href="htttps://Facebook.com/">Facebook</a></li>
+            <li><a href="htttps://YouTube.com/">YouTube</a></li>
+            <li><a href="https://instagram.com/takasyo_kyoto?igshid=YmMyMTA2M2Y=">Instagram</a></li>
+        </ul>
+            <p><small>&copy;2023 ryuga</small></p>
+    </footer>
+<!--JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

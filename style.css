@@ -1,0 +1,629 @@
+@charset "UTF-8";
+
+/*共通部分
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+html{
+    Scroll-behavior:smooth;
+    font-size:100%;
+}
+body{
+    font-family:"Yu Gothic Medium","游ゴシック Medium","YuGothic","游ゴシック体","ヒラギノ角ゴ pro w3",sans-serif;
+    line-height: 1.7;
+    background: linear-gradient(#ffffff,#d7d7d7);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+p{
+    color: #000000;
+}
+
+/* HEADER*/
+.logo{
+    width: 210px;
+    margin-top:14px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+.main-nav{
+    display: flex;
+    font-size:1.25rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase; /*アルファベット文字を大文字に変換*/
+    margin-top: 34px;
+    letter-spacing: 0.8em;   /*ナビゲーションのテキスト間*/
+    list-style:none;
+}
+.main-nav li {
+    text-align: center;
+    margin: 2rem 0;
+}
+.main-nav a{
+    display: block;
+    color:#ffffff
+}
+.main-nav a:hover{
+    color:rgb(123, 11, 135);
+}
+.page-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+#language-selector {
+    font-size: 16px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+/*フッター*/
+footer{
+    background: #ffffff;
+    text-align: center;
+    padding: 3rem;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+footer li {
+    margin: 0 12px;
+}
+footer a{
+    color: #000000;
+}
+footer a:hover{
+    color: rgb(123, 11, 135);
+}
+footer small{
+    color:#000000;
+    font-size: 0.875rem;
+}
+
+#news{
+    background-image: url(../images/news-bg.jpg);
+    height:auto;
+    margin-bottom: 40px;
+}
+#news .page-title{
+    text-align: center;
+    color: #000000;
+}
+
+/*    #HOME
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー------------------------------------ーーーーーーー*/
+.home-content{
+    text-align: center;
+    margin-top: 10%;
+}
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+    color: #ffffff;
+}
+/*見出し*/
+.page-title{
+    font-size: 5rem;
+    font-family: 'philosopher',serif;
+    font-weight: normal;
+    color: #000000;
+}
+/*ボタン*/
+.button{
+    font-size: 1.375rem;
+    background: rgb(250, 250, 250);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border-style: double;
+    padding: 18px 32px;
+}
+.button:hover{
+    background: rgb(123, 11, 135)
+}
+/*大きな背景画像*/
+.big-bg{
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+#home{
+    background-image: url(../images/main-bg.jpg),linear-gradient(#112d15,#fd8300);
+    background-blend-mode: hard-light;
+    min-height: 100vh;
+}
+#home .page-title{
+    text-transform: none;
+    color: #000000;
+}
+/*ホームの２画面目*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh; /* -画面の高さに合わせる場合- */
+}
+
+.box {
+    flex-basis: 50%; /* -横幅を半分にする- */
+    height: 50%; /* -縦幅を半分にする -*/
+    box-sizing: border-box;
+    border: 1px solid rgb(123, 11, 135); /* -枠線を付ける- */
+}
+/*ABOUT*/
+
+
+
+
+/*スライドショー*/
+.slideshow {
+    position: relative;
+}
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slideshow img:first-child {
+    opacity: 1;
+}
+.slideshow img.active {
+    opacity: 1;
+}
+.grid-gallery{
+    position: auto;
+    max-width: 100%;
+    height: auto;
+}
+.grid-item{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/*#CONTACT*/
+.win-map{
+    display: flex;
+    position: relative;
+}
+.map{
+    position: absolute;
+    top: 10px;
+    right: -55px;
+}
+/*アニメーション*/
+.animetion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.video {
+    text-align: center;
+}
+
+/*ブログ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー-----------------------------ーーーー*/
+/*桐箱について*/
+.blog-content{
+    width: 210px;
+    margin-top:130px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+}
+.content-midasi{
+    border-radius: 10px 20px 30px 40px;
+}
+
+.sub-menu{
+    display: flex;
+}
+
+.blog-content .page-title{
+    flex: 1;
+}
+.blog-content .main-nav{
+    flex: 1;
+    margin-top:110px;
+    letter-spacing: 3em;
+}
+
+.haba{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgb(123, 11, 135);
+    margin-top: 50px;
+}
+
+.page-midasi{
+    font-size: 3rem;
+    font-family: 'philosopher',serif;
+    font-weight: normal;
+    color: #000000;
+}
+.kiri{
+    flex-basis: 2;
+}
+.news{
+    flex-basis: 1;
+    width: 30vh;
+    border-left: 1px solid rgb(123, 11, 135);
+}
+
+
+.yosa{
+    height: 75vh;
+    width: 100vh;
+}
+
+.pr-youto{
+    display: flex;
+    border-top: 1px solid rgb(123, 11, 135);
+    border-bottom: 1px solid rgb(123, 11, 135);
+}
+.pr{
+    flex: 1;
+    border-right: 1px solid rgb(123, 11, 135);
+    height: 50vh;
+}
+.youto{
+    flex: 1;
+    height: 50vh;
+}
+.rekisi{
+    height: 50vh;
+}
+
+/*Contact
+---------------------------------------------------------------------------------------------------*/
+.fom{
+    flex: 2;
+}
+.contact-map{
+    flex: 1;
+    margin-left: 100px;
+}
+/*時間と写真*/
+.container {
+    display: flex;
+
+}
+
+.jouhou {
+    flex: 1;
+    margin-right: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #000000;
+}
+
+td:first-child {
+    font-weight: bold;
+    width: 120px;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+.image img {
+    max-width: 100%;
+    border-radius: 5px;
+    width: 600px; /* 画像の幅を指定 */
+    height: 450px; /* 高さを自動調整 */
+}
+/*Q＆Aと購入リンク*/
+.contact-rink {
+    display: flex;
+}
+
+.scrollable-box {
+    flex-basis: 60%;
+    overflow: auto;
+}
+
+.rink {
+    flex-basis: 40%;
+}
+
+
+
+
+
+
+/*記事部分*/
+article{
+    width: 60%;
+    order: 2;
+}
+
+/*サイドバー*/
+aside{
+    width: 22%;
+    order: 3;
+}
+.ad{
+    order: 1;
+}
+
+.news-contents{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.post-info{
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+
+.post-date{
+    background: #0bd;
+    border-radius: 50%;
+    color: #ddd;
+    width: 100px;
+    height: 100px;
+    font-size: 1.625rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    padding-top: 10px;
+}
+
+.post-date span{
+    font-size: 1rem;
+    border-top: 1px rgba(255,255,255,.5)solid;
+    padding-top: 6px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.post-title{
+    font-family: "Yu Mincho","YuMincho",serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.post-title,
+.post-cat{
+    margin-left: 120px;
+    color: #ddd;
+}
+
+article img{
+    margin-bottom: 20px;
+}
+article h3{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+article p{
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.sub-title{
+    color: #ffffff;
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+}
+
+aside p{
+    padding: 12px 10px;
+    color: rgb(0, 0, 0);
+}
+
+.sub-menu{
+    margin-bottom: 60px;
+    list-style: none;
+    color: #ddd;
+}
+
+.sub-menu li{
+    border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a{
+    color: #ddd;;
+    padding: 10px;
+    display: block;
+}
+
+.sub-menu a:hover{
+    color: #0bd;
+}
+/*店舗情報・地図*/
+#location.wrapper,
+#sns.wrapper{
+    flex-direction: row-reverse;
+}
+.location-info,
+.location-map,
+.sns-box{
+    width: 100%;
+    margin-bottom: 30%;
+}
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+    .page-title{
+        font-size: 2.5rem;
+    }
+    .page-header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*HEADER*/
+    .main-nav{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li{
+        margin: 0 20px;
+    }
+
+    /*HOME*/
+    .home-content{
+        margin-top: 20%;
+    }
+
+    /*NEWS*/
+    .news-contents{
+        flex-direction: column;
+    }
+    article,
+    aside{
+        width: 100%;
+    }
+    #news.page-title{
+        margin-top: 30px;
+    }
+    aside{
+        margin-top: 60px;
+    }
+    .post-info{
+        margin-bottom: 30px;
+    }
+    .post-date{
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    .post-date span{
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+    .post-title{
+        font-size: 1.357rem;
+    }
+    .post-cat{
+        font-size:0.875rem;
+        margin-top: 10px;
+    }
+    .post-title,
+    .post-cat{
+        margin-left: 80px;
+    }
+
+    /*MENU*/
+    .menu-content{
+        margin-top: 20%;
+    }
+
+    .big-box{
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .big-box img{
+        height: 100%;
+    }
+
+    /*CONTACT*/
+    #contact.page-title{
+        margin-top: 40px;
+    }
+
+    /*フォーム*/
+    input[type="text"],
+    input[type="email"],
+    textarea{
+        max-width: 100%;
+    }
+
+    /*店舗情報・地図*/
+    #location.wrapper,
+    #sns.wrapper{
+        flex-direction: column;
+    }
+    .location-info,
+    .location-map,
+    .sns-box{
+        width: 100%;
+    }
+    .sns-box{
+        margin-bottom: 30%;
+    }
+}
+
+
+
+/*420px以下（スマホの横向き）
+------------------------------------------------*/
+@media(max-height:420px){
+    header{
+        padding: 1rem;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    .button{
+        padding: .5rem 1rem;
+    }
+    .btn-menu{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        border: 1px solid raba(255,255,255,5);
+        color: #000000;
+        padding: .5rem 1rem;
+    }
+    .main-nav{
+        position: absolute;
+        width: 0%;
+        list-style: none;
+        z-index: 2;
+        top: 50px;
+        right: 0;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .main-nav.open-menu{
+        width: 100%;
+    }
+}
+
+
+/*ダークモード
+---------------------------------------------------*/
+@media(prefers-color-scheme:dark){
+    body{
+        background-color: #000000;
+    }
+
+}

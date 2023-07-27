@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>京都  崇匠  桐箱職人-オーダーメイドの高級桐箱＆修復</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="京都の伝統桐箱職人がひとつひとつ高級な逸品をお作りいたします。オーダーメイドから箱の修復まで幅広くお受けいたします。">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="京都,南丹市,山科,オーダーメイド,伝統工芸,桐箱,木箱,木工芸,京もの">
+
+    <!--CSS-->
+    <link ref="stylesheet" herf="https://unpkg.com/ress/dist/ress.min.css">
+    <link herf ="https://font.googleapis.com/css?family=Philosopher" ref="stylesheet"> <!--Googleフォント-->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="icon"type="image/png"href="images/favicon.PNG">
+
+</head>
+<body>
+    <div id="order"class="big-bg">
+        <header class="page-header wrapper">
+            <h1><a href="index.html"><img class="logo" src="images/logo.PNG" alt="崇症LOGO"></a></h1>
+
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="blog.html">桐箱について</a></li>
+                    <li><a href="photo.html">製品紹介</a></li>
+                    <li><a href="atorie.html">アトリエ</a></li>
+                    <li><a href="blog.html">お知らせ</a></li>
+                    <li><a href="store.html">オンラインストア</a></li>
+                    <li><a href="meido.html">オーダーメイド</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="atorie.html"><img src="images/kirimonn.jpg" alt="桐紋章"></a></li>
+                </ul>
+            </nav>
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+            </select>
+        </header>
+
+        <div class ="home-content wrapper">
+            <h2 class="page-title">崇匠</h2>
+            <p>京都の桐箱職人、伝統技術を守り、高級桐箱をあなたの大切なもののために製作します</p>
+            <a class="button" href="order.html">ご注文</a>
+        </div><!--/.home-content-->
+
+    </div><!--/#home-->
+
+
+    <div class="container">
+        <!--/企業理念-->
+        <div class ="box about-content wrapper">
+            <h2 class="page-title">ABouT US</h2>
+            <p>日本全国、そして世界へと京都の伝統工芸『高級桐箱』をあなたのもとへ <br>
+            最高級の素材と最高級の技術で他では作れない最高の逸品をお創りします</p>
+        </div>
+
+        <!--時間が経てば写真が切り替わる-->
+        <div class="box slideshow">
+            <a class="grid-gallery" href="images/img1-1600.jpg">
+                <img id="slide1"class="grid-item" src="images/image1.jpg">
+                <img id="slide2" class="grid-item"  src="images/image2.jpg">
+                <img id="slide3" class="grid-item" src="images/image3.jpg">
+            </a>
+
+            <script>
+                var slideIndex = 0;
+                var slides = document.querySelectorAll(".slideshow img");
+
+                function showSlides() {
+                for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].classList.add("active");
+                setTimeout(showSlides, 5000); // 切り替え時間
+                }
+
+                showSlides();
+            </script>
+        </div>
+
+        <!--アニメーション-->
+        <div class="box animetion">
+            <video width="640" height="360" controls autoplay loop>
+                <source src="path/to/video.mp4" type="video/mp4">
+                <source src="path/to/video.webm" type="video/webm">
+                <source src="path/to/video.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!--住所-->
+        <div class="box contact-content wrapper">
+            <div class="win-map">
+                <h2 class="page-title">ConTact</h2>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1632.5157577416503!2d135.52708786603375!3d35.080945299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60005203a3b3aca9%3A0xfd974fb1d571ac5e!2z44CSNjI5LTAxMTQg5Lqs6YO95bqc5Y2X5Li55biC5YWr5pyo55S65YyX5bqD54Cs5aCC44OO5pys77yT77yU!5e0!3m2!1sja!2sjp!4v1681145140183!5m2!1sja!2sjp" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+                <p>住所:京都府南丹市八木町北広瀬堂ノ本34<br>
+                メールアドレス:yufiee2014@gmail.com<br>
+                電話:090-1712-7664<br>
+                FAX:0771-43-1922<br>
+                営業時間:9:00~17:00<br>
+                </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <ul class="footer-nav">
+            <li><a href="htttps://twitter.com/">Twitter</a></li>
+            <li><a href="htttps://Facebook.com/">Facebook</a></li>
+            <li><a href="htttps://YouTube.com/">YouTube</a></li>
+            <li><a href="https://instagram.com/takasyo_kyoto?igshid=YmMyMTA2M2Y=">Instagram</a></li>
+        </ul>
+            <p><small>&copy;2023 ryuga</small></p>
+    </footer>
+<!--JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
