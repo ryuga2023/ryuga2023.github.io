@@ -1,3 +1,22 @@
+/*スライドショー*/
+var slideIndex = 0;
+var slides = document.querySelectorAll(".slideshow img");
+
+function showSlides() {
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].classList.add("active");
+    setTimeout(showSlides, 5000); // 切り替え時間
+}
+
+showSlides();
+
+
 /* メニューボタン*/
 const btn = document.querySelector('.btn-menu');
 const nav = document.querySelector('.main-nav');
