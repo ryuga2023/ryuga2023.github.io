@@ -3,7 +3,7 @@
 /*共通部分
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 html{
-    Scroll-behavior:smooth;
+    scroll-behavior:smooth;
     font-size:100%;
 }
 body{
@@ -18,8 +18,9 @@ img{
     max-width: 100%;
 }
 p{
-    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
 }
+
 
 /* HEADER*/
 .logo{
@@ -31,11 +32,11 @@ p{
 }
 .main-nav{
     display: flex;
-    font-size:1.25rem;
+    font-size:1rem;
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase; /*アルファベット文字を大文字に変換*/
     margin-top: 34px;
-    letter-spacing: 0.8em;   /*ナビゲーションのテキスト間*/
+    letter-spacing: 1.5rem;   /*ナビゲーションのテキスト間*/
     list-style:none;
 }
 .main-nav li {
@@ -44,7 +45,7 @@ p{
 }
 .main-nav a{
     display: block;
-    color:#ffffff
+    color:#ffffff;
 }
 .main-nav a:hover{
     color:rgb(123, 11, 135);
@@ -59,6 +60,16 @@ p{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 4%;
+}
+/* 画像を右側に配置するクラス */
+.right-image {
+    float: right;
+}
+
+/* 画像リンク全体のスタイルを調整するクラス */
+.image-link {
+    display: inline-block; /* リンクをブロックではなくインラインブロックとして表示 */
+    margin-bottom: 10px; /* 下方向の余白を追加 */
 }
 
 #language-selector {
@@ -86,6 +97,7 @@ footer ul{
 }
 footer li {
     margin: 0 12px;
+    list-style:none;
 }
 footer a{
     color: #000000;
@@ -97,22 +109,12 @@ footer small{
     color:#000000;
     font-size: 0.875rem;
 }
-
-#news{
-    background-image: url(../images/news-bg.jpg);
-    height:auto;
-    margin-bottom: 40px;
-}
-#news .page-title{
-    text-align: center;
-    color: #000000;
-}
-
 /*    #HOME
 ーーーーーーーーーーーーーーーーーーーーーーーーーーー------------------------------------ーーーーーーー*/
 .home-content{
     text-align: center;
     margin-top: 10%;
+    color: #ffffff;
 }
 .home-content p {
     font-size: 1.125rem;
@@ -124,13 +126,13 @@ footer small{
     font-size: 5rem;
     font-family: 'philosopher',serif;
     font-weight: normal;
-    color: #000000;
 }
 /*ボタン*/
 .button{
     font-size: 1.375rem;
-    background: rgb(250, 250, 250);
-    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     border-style: double;
     padding: 18px 32px;
@@ -151,7 +153,7 @@ footer small{
 }
 #home .page-title{
     text-transform: none;
-    color: #000000;
+    color: #ffffff;
 }
 /*ホームの２画面目*/
 .container {
@@ -167,8 +169,16 @@ footer small{
     border: 1px solid rgb(123, 11, 135); /* -枠線を付ける- */
 }
 /*ABOUT*/
-
-
+.container .page-title{
+    text-transform: none;
+    color: #000000;
+}
+.about-content p {
+    font-size: 1.25rem; /* 大きなフォントサイズ */
+    text-align: center; /* テキストを中央揃え */
+    margin-top: 100px; /* 上部に余白追加 */
+    margin-bottom: 10px; /* 下部に余白追加 */
+}
 
 
 /*スライドショー*/
@@ -198,16 +208,6 @@ footer small{
     width: 100%;
     height: 100%;
 }
-/*#CONTACT*/
-.win-map{
-    display: flex;
-    position: relative;
-}
-.map{
-    position: absolute;
-    top: 10px;
-    right: -55px;
-}
 /*アニメーション*/
 .animetion{
         display: flex;
@@ -216,6 +216,20 @@ footer small{
 }
 .video {
     text-align: center;
+}
+
+/*CONTACT*/
+.win-map{
+    display: flex;
+    position: relative;
+}
+.map{
+    position: absolute;
+    top: 50px;
+    right: -55px;
+}
+.contact-info {
+    margin: 100px 0; /* 上下に10pxの余白を追加 */
 }
 
 /*ブログ
