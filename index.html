@@ -20,9 +20,16 @@
 <body>
     <div id="home"class="big-bg">
         <header class="page-header wrapper"> <!--ヘッダー-->
-            <h1><a href="index.html"><img class="logo" src="images/logo.PNG" alt="崇症LOGO"></a></h1>
+            <h1><a href="index.html">
+                    <img class="logo" src="images/logo.PNG" alt="崇症LOGO">
+                </a>
+                <a href="atorie.html">
+                    <img class="right-image" src="images/kirimonn.jpg" alt="桐紋章">
+                </a>
+            </h1>
 
             <nav>
+                <button class="btn-menu">MENU</button>
                 <ul class="main-nav">
                     <li><a href="blog.html">桐箱について</a></li>
                     <li><a href="photo.html">製品紹介</a></li>
@@ -33,9 +40,7 @@
                     <li><a href="contact.html">お問い合わせ</a></li>
                 </ul>
             </nav>
-            <a class="image-link" href="atorie.html">
-                <img class="right-image" src="images/kirimonn.jpg" alt="桐紋章">
-            </a>
+
             <select id="language-selector"> <!--言語選択-->
                 <option value="en">English</option>
                 <option value="ja">日本語</option>
@@ -44,8 +49,9 @@
 
         <div class ="home-content wrapper">
             <h2 class="page-title">崇匠</h2>
-            <p>
-            京都の桐箱職人、伝統技術を守り、高級桐箱をあなたの大切な人（もの）のために製作します
+            <p class="main-phrase">
+            京都の桐箱職人、伝統の魂と職人の技を込めて、<br>
+            高級桐箱をあなたの大切な人（モノ）のためにお創りします
             </p>
             <a class="button" href="order.html">ご注文</a>
         </div><!--/.home-content-->
@@ -65,7 +71,7 @@
 
         <!--時間が経てば写真が切り替わる-->
         <div class="box slideshow">
-            <a class="grid-gallery" href="images/img1-1600.jpg">
+            <a class="grid-gallery">
                 <img id="slide1"class="grid-item" src="images/image1.jpg">
                 <img id="slide2" class="grid-item"  src="images/image2.jpg">
                 <img id="slide3" class="grid-item" src="images/image3.jpg">
