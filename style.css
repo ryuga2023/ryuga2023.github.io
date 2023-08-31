@@ -1,4 +1,16 @@
 @charset "UTF-8";
+/*
+VARIABLES
+================================================== */
+:root {
+    --light-green: #d5edeb;
+    --green: #63dbd0;
+    --brown: #62514a;
+    --light-grey: #eee;
+    --white: #fff;
+    --oswald-font: 'Oswald', sans-serif;
+}
+
 
 /*共通部分
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -30,22 +42,69 @@ p{
     top: 0;
     left: 20px;
 }
+/* 桐、画像リンク全体のスタイルを調整するクラス */
+.right-image {
+    width: 150px;
+    margin-top:14px;
+    position: absolute;
+    top: 0;
+    right: 150px;
+}
+
+/*スライドメニュー*/
+.btn-menu{
+    position: fixed;
+    right: 1.5rem;
+    top: 7rem;
+    z-index: 4;
+    padding: .5rem 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+}
+.btn-menu svg {
+    fill: #ffffff;
+    margin-top: .25rem;
+    height: 2rem;
+    width: 2rem;
+}
+/* 閉じるボタン */
+#menu-close {
+    border: 1px solid var(--light-green);
+}
+#menu-close svg {
+    fill: var(--light-green);
+}
+/* スライドメニューパネル */
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 8rem 2rem 2rem;
+    width: max(32vw, 20rem);
+    height: 100vh;
+    background-color: var(--brown);
+    box-shadow: 0 0 2rem var(--brown);
+    translate: 100vw;
+}
+
 .main-nav{
-    display: flex;
-    font-size:1rem;
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase; /*アルファベット文字を大文字に変換*/
-    margin-top: 34px;
-    letter-spacing: 1.5rem;   /*ナビゲーションのテキスト間*/
+    letter-spacing: 2.0rem;   /*ナビゲーションのテキスト間*/
     list-style:none;
 }
 .main-nav li {
-    text-align: center;
     margin: 2rem 0;
+    opacity: 0;
 }
 .main-nav a{
-    display: block;
     color:#ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 .main-nav a:hover{
     color:rgb(123, 11, 135);
@@ -61,16 +120,8 @@ p{
     margin: 0 auto;
     padding: 0 4%;
 }
-/* 画像を右側に配置するクラス */
-.right-image {
-    float: right;
-}
 
-/* 画像リンク全体のスタイルを調整するクラス */
-.image-link {
-    display: inline-block; /* リンクをブロックではなくインラインブロックとして表示 */
-    margin-bottom: 10px; /* 下方向の余白を追加 */
-}
+
 
 #language-selector {
     font-size: 16px;
@@ -113,14 +164,23 @@ footer small{
 ーーーーーーーーーーーーーーーーーーーーーーーーーーー------------------------------------ーーーーーーー*/
 .home-content{
     text-align: center;
-    margin-top: 10%;
     color: #ffffff;
 }
-.home-content p {
-    font-size: 1.125rem;
-    margin: 10px 0 42px;
-    color: #ffffff;
+
+.main-title{
+    font-size: 7rem;
+    font-family: 'philosopher',serif;
+    font-weight: normal;
+    margin-top: 10px;
 }
+
+.main-phrase {
+    font-size: 2rem;
+    margin: 250px 0 60px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 /*見出し*/
 .page-title{
     font-size: 5rem;
@@ -131,7 +191,7 @@ footer small{
 .button{
     font-size: 1.375rem;
     font-family: 'Times New Roman', Times, serif;
-    background: rgb(0, 0, 0);
+    background: rgb(111, 111, 111);
     color: rgb(255, 255, 255);
     border-radius: 5px;
     border-style: double;
@@ -154,7 +214,10 @@ footer small{
 #home .page-title{
     text-transform: none;
     color: #ffffff;
+
 }
+
+
 /*ホームの２画面目*/
 .container {
     display: flex;
@@ -172,12 +235,13 @@ footer small{
 .container .page-title{
     text-transform: none;
     color: #000000;
+    text-align: center;
+    padding: 2rem;
 }
-.about-content p {
-    font-size: 1.25rem; /* 大きなフォントサイズ */
+.about-rinen{
+    font-size: 1.5rem; /* 大きなフォントサイズ */
     text-align: center; /* テキストを中央揃え */
-    margin-top: 100px; /* 上部に余白追加 */
-    margin-bottom: 10px; /* 下部に余白追加 */
+    margin-top: 2rem; /* 上部に余白追加 */
 }
 
 
@@ -210,9 +274,10 @@ footer small{
 }
 /*アニメーション*/
 .animetion{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .video {
     text-align: center;
@@ -229,8 +294,10 @@ footer small{
     right: -55px;
 }
 .contact-info {
-    margin: 100px 0; /* 上下に10pxの余白を追加 */
+    margin: 100px 10px; /* 上下に10pxの余白を追加 */
+    font-size: 1.15rem;
 }
+
 
 /*ブログ
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー-----------------------------ーーーー*/
@@ -488,10 +555,29 @@ aside p{
 }
 
 
+/*レスポンシブ
+-------------------------------------------------------------*/
+/*デスクトップ以下なら*/
+@media(max-width:1600px){
+/* 折り畳み時のメニューのスタイル */
 
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
 
-
-
+    .open-menu {
+        display: flex;
+        transform: translateY(0);
+    }
+}
 
 
 @media(max-width:600px){
@@ -515,6 +601,10 @@ aside p{
     /*HOME*/
     .home-content{
         margin-top: 20%;
+    }
+
+    .about-rinen {
+        font-size: 1.2rem;
     }
 
     /*NEWS*/
@@ -597,41 +687,71 @@ aside p{
 
 
 
-/*420px以下（スマホの横向き）
-------------------------------------------------*/
-@media(max-height:420px){
-    header{
-        padding: 1rem;
+/* スマートフォン用スタイル */
+@media (max-width: 767px) {
+    /* ヘッダー */
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
     }
-    h1{
-        font-size: 1.5rem;
+    .logo {
+        margin-top: 20px;
+        position: static;
     }
-    .button{
-        padding: .5rem 1rem;
+    #language-selector {
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
     }
-    .btn-menu{
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        border: 1px solid raba(255,255,255,5);
-        color: #000000;
-        padding: .5rem 1rem;
+    /* ホームコンテンツ */
+    .home-content {
+        margin-top: 20%;
     }
-    .main-nav{
-        position: absolute;
-        width: 0%;
-        list-style: none;
-        z-index: 2;
-        top: 50px;
-        right: 0;
-        overflow: hidden;
-        transition: .5s;
+
+    /* ABOUT USセクション */
+    .about-content p {
+        margin-top: 50px;
+        font-size: 1rem;
     }
-    .main-nav.open-menu{
-        width: 100%;
+
+    /* スライドショー */
+    .slideshow img {
+        position: static;
+        opacity: 1;
+        transition: none;
+    }
+
+    /* 連絡先情報 */
+    .win-map {
+        flex-direction: column;
+        align-items: center;
+    }
+    .map {
+        position: static;
+        margin-top: 20px;
+        right: auto;
+    }
+    .contact-info {
+        margin: 50px 0;
     }
 }
 
+  /* タブレット用スタイル */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* スライドショー */
+    .slideshow img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/*420px以下（スマホの横向き）
+------------------------------------------------
+
+
+--*/
 
 /*ダークモード
 ---------------------------------------------------*/
